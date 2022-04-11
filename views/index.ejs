@@ -1,0 +1,55 @@
+
+<!-- include header -->
+    <%- include('include/_header') %>
+<!-- /include header -->
+
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/lnf/found" class="border-shadow">
+                    <span class="text-gradient">Add property <i class="fas fa-user"></i></span>
+                </a>
+                <br>
+                <a href="/lnf/raise" class="border-shadow">
+                    <span class="text-gradient">Raise Lost request <i class="fas fa-user"></i></span>
+                </a>
+            </div>
+            <br><br>
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>title</th>
+                            <th>date</th>
+                            <th>Category</th>
+                            <th>location</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i = 0; i < details.length; i++) { %>
+                            <tr>
+                                <td><%= i + 1 %></td>
+                                <td><%= details[i].title%></td>
+                                <td><%= details[i].date %></td>
+                                <td><%= details[i].category %></td>
+                                <td><%= details[i].location %></td>
+                                
+                                
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+<!-- /Main Site -->
+
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

@@ -1,0 +1,18 @@
+<% for(var i = 0; i < details.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= details[i].title%></td>
+        <td><%= details[i].date %></td>
+        <td><%= details[i].category %></td>
+        <td><%= details[i].location %></td>
+        <td></td>
+        <td>
+            <a href="/update-user?id=<%= details[i]._id%>" class="btn border-shadow update" >
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a class="btn border-shadow delete" data-id=<%= details[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>
