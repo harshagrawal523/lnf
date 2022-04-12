@@ -27,6 +27,7 @@
                             <th>date</th>
                             <th>Category</th>
                             <th>location</th>
+                            <th>Delete</th>
                             
                         </tr>
                     </thead>
@@ -38,7 +39,11 @@
                                 <td><%= details[i].date %></td>
                                 <td><%= details[i].category %></td>
                                 <td><%= details[i].location %></td>
-                                
+                                <td >
+                                    <a  href="lnf/delete/<%= details[i]._id %> "
+                                      >Delete</a
+                                    >
+                                  </td>
                                 
                             </tr>
                             <% } %>

@@ -20,7 +20,7 @@ const storage = multer.diskStorage({
     storage: storage,
   });
 
-router.get("/", lnfControllers.getlnfDetails);
+// router.get("/", lnfControllers.getlnfDetails);
 
 router.get("/raise",(req,res)=>{
     res.render("add_user");
@@ -30,5 +30,26 @@ router.post("/raisepost",
     uploads.single('image'),
     lnfControllers.postlnfDetails
 )
+
+router.get(
+  "/delete/:id",
+  lnfControllers.deletelnfDetail
+);
+
+router.get("/", lnfControllers.getfoundDetails);
+
+router.get("/found",(req,res)=>{
+  res.render("addfound");
+});
+
+router.post("/foundpost",
+    uploads.single('image'),
+    lnfControllers.postfoundDetails
+)
+
+router.get(
+  "/deletefound/:id",
+  lnfControllers.deletefoundDetail
+);
 
   module.exports = router;
