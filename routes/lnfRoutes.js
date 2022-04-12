@@ -27,7 +27,7 @@ router.get("/raise",(req,res)=>{
 });
 
 router.post("/raisepost",
-    uploads.single('link'),
+    uploads.single('image'),
     lnfControllers.postlnfDetails
 )
 

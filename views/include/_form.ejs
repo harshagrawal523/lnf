@@ -1,5 +1,5 @@
  <!-- form handling -->
- <form action="/lnf/raisepost" method="POST" id="add_user">
+ <form action="/lnf/raisepost" method="POST" id="add_user" enctype="multipart/form-data">
     <div class="new_user">
         <div class="form-group">
             <label for="title" class="text-light">Title</label>
@@ -27,8 +27,8 @@
             <input type="text" name="description" value="" placeholder="">
         </div>
         <div class="form-group">
-            <label for="link" class="text-light">Image</label>
-            <input type="file" name="link" id="link" value="" placeholder="">
+            <label for="image" class="text-light">Image</label>
+            <input type="file" name="image" id="image" value="" placeholder="">
         </div>
         <!-- <div class="form-group">
             <label for="gender" class="text-light">Gender</label>
